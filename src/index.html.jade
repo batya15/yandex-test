@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        title= build + ' Главная страница'
+        if (build == 'prod')
+            script(data-main="main" src="/main.js")
+            link(rel='stylesheet', href='/styles.css')
+        else
+            link(rel='stylesheet', href='/vendor/css/normalize.css')
+            link(rel='stylesheet', href='/styles/main.css')
+            script(data-main="main" src="/main.js")
+    body
+                Jade 2 is a terse and simple
+                templating language with a
+                strong focus on performance
+                and powerful features.

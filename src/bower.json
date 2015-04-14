@@ -1,0 +1,20 @@
+{
+  "name": "bElements admin",
+  "version": "1.0.0",
+  "authors": [
+    "'Batyr <batya.char@gmail.com>"
+  ],
+  "description": "Cold Control admin",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "normalize.css": "~3.0.2"
+  }
+}
