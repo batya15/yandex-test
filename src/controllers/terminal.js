@@ -62,7 +62,7 @@
             this._history.splice(0, 1);
         }
         this._history.push(command);
-        this.currentIndex = this._history.length;
+        delete this.currentIndex;
     };
 
     /**
@@ -74,6 +74,9 @@
         if (typeof this.currentIndex === "number") {
             this.currentIndex = (this.currentIndex + 1 > this._history.length) ? this.currentIndex = 1 : this.currentIndex + 1;
             result = this._history[this.currentIndex - 1];
+        } else {
+            result = this._history[0];
+            this.currentIndex = 1;
         }
         return result;
     };
@@ -87,6 +90,9 @@
         if (typeof this.currentIndex === "number") {
             this.currentIndex = (this.currentIndex - 1 < 1) ? this.currentIndex = this._history.length : this.currentIndex - 1;
             result = this._history[this.currentIndex - 1];
+        } else {
+            result = this._history[this._history.length - 1];
+            this.currentIndex = this._history.length;
         }
         return result;
     };

@@ -1,3 +1,94 @@
-body {
+@import url(http://fonts.googleapis.com/css?family=Cousine&subset=latin,cyrillic-ext);
+
+body, html {
   background: #e1e1e1;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+}
+
+.main {
+  width: 900px;
+  height: 100%;
+  min-height: 500px;
+  margin: 0 auto;
+
+
+
+  .browser {
+    height: 49%;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    margin-bottom: 1%;
+  }
+
+  .terminal {
+    height: 50%;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    padding-bottom: 50px;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Cousine';
+
+    .output {
+      height: 100%;
+      overflow: auto;
+      padding: 5px;
+      line-height: 30px;
+
+      .err {
+        color: red;
+      }
+
+      .err {
+        color: red;
+      }
+
+    }
+
+    .input {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      border-top: 1px solid #eee;
+      box-sizing: border-box;
+      padding: 5px;
+      background: white;
+
+      input {
+        border-width: 0;
+        outline: none;
+        margin-left: 10px;
+        width: 744px;
+        height: 36px;
+      }
+
+      button {
+        border-width: 0;
+        background: #26a69a;
+        color: white;
+        height: 36px;
+        width: 120px;
+        outline: none;
+
+        &:hover {
+          background: #29c0b4;
+        }
+        &:active {
+          background: #26a69a;
+        }
+
+      }
+
+    }
+
+  }
+
 }
