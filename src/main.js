@@ -2,10 +2,8 @@ console.log('startApp');
 
 var terminal = new window.Class.TerminalController();
 
-terminal.addCommand('cmd', function(e, r){
-    console.info(e, r);
-    return 'ok';
+terminal.addCommand('print', function(text){
+    return text;
 });
-
 
 new window.Class.TerminalView(terminal);
