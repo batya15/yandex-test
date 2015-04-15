@@ -13,7 +13,7 @@
 
 
     /**
-     * Запуск команды
+     * Р—Р°РїСѓСЃРє РєРѕРјР°РЅРґС‹
      */
     TerminalView.prototype._addText = function (text, type) {
         var div = document.createElement('div');
@@ -24,7 +24,7 @@
     };
 
     /**
-     * Запуск команды
+     * Р—Р°РїСѓСЃРє РєРѕРјР°РЅРґС‹
      */
     TerminalView.prototype.runCommand = function () {
         var command = this.$el.find('[data-input]').val();
@@ -43,7 +43,7 @@
     };
 
     /**
-     * Обработка Enter, up, down
+     * РћР±СЂР°Р±РѕС‚РєР° Enter, up, down
      * @param e
      */
     TerminalView.prototype.onPressUp = function (e) {
@@ -57,15 +57,14 @@
     };
 
     /**
-     * Очистка консоли
-     * @param e
+     * РћС‡РёСЃС‚РєР° РєРѕРЅСЃРѕР»Рё
      */
     TerminalView.prototype.clean = function () {
         this.$el.find('[data-output]').empty();
     };
 
     /**
-     * Чтобы курсор не прыгал
+     * Р§С‚РѕР±С‹ РєСѓСЂСЃРѕСЂ РЅРµ РїСЂС‹РіР°Р»
      * @param e
      */
     TerminalView.prototype.onKeyDown = function (e) {

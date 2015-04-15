@@ -7,3 +7,4 @@ terminal.addCommand('print', function(text){
 });
 
 new window.Class.TerminalView(terminal);
+new window.Class.BrowserView(terminal);

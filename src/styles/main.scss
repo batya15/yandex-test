@@ -24,6 +24,47 @@ body, html {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: white;
     margin-bottom: 1%;
+
+    .tabs {
+      height: 50px;
+      border-bottom: 1px solid #ddd;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px 5px 0 5px;
+
+        li {
+          float: left;
+          height: 40px;
+          min-width: 130px;
+          line-height: 40px;
+          margin: 0 2px;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 2px 2px 0 0;
+          user-select: none;
+
+          &.active {
+            color: white;
+            background: #26a69a;
+          }
+
+          &:hover {
+            color: white;
+            background: #26a69a;
+          }
+
+        }
+
+      }
+
+    }
+
+    .content {
+      height: calc(100% - 50px);
+    }
+
   }
 
   .terminal {

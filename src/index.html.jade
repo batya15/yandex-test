@@ -10,7 +10,22 @@ html(lang="en")
             link(rel='stylesheet', href='/styles/main.css')
     body
         .main
-            .browser
+            .browser(data-browser)
+                .tabs
+                    ul(data-tabs)
+                .content(data-content)
+                    .tab(data-tab='Текст')
+                        p тут текст об мне
+                    .tab(data-tab='Рейтинг')
+                        p Звездочки
+                    .tab(data-tab='Прогресс бар')
+                        p Прогресс бар
+                    .tab(data-tab='Кнопка')
+                        p Кнопки
+                    .tab(data-tab='Иконки')
+                        p Иконки
+                    .tab(data-tab='Газета')
+                        p Газета
             .terminal(data-terminal)
                 .output(data-output)
                     .center *** Welcome to terminal ***
@@ -25,4 +40,5 @@ html(lang="en")
         script(data-main="main" src="/initDomain.js")
         script(data-main="main" src="/controllers/terminal.js")
         script(data-main="main" src="/views/terminal.js")
+        script(data-main="main" src="/views/browser.js")
         script(data-main="main" src="/main.js")
