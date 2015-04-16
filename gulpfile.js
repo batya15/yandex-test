@@ -215,14 +215,17 @@ function concatRjs() {
 }
 
 function concatAllJs() {
-    return gulp.src(['temp/all.js', 'temp/**/require.js', 'temp/require-config.js'])
+    return gulp.src([config.path.build + '/**/*.js', '!**/test/**'])
         .pipe(order([
-            "**/require.js",
-            "**/require-config.js",
-            "**/all.js"
+            "**/jquery.js",
+            "**/initDomain.js",
+            "**/man.js",
+            "**/terminal.js",
+            "**/browser.js",
+            "**/main.js"
         ]))
         .pipe(concat("main.js"))
-       // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(config.path.release));
 
 }
@@ -238,4 +241,4 @@ gulp.task('development', gulp.series('clean', installModules, 'bower',
 
 gulp.task('default', gulp.series('development', registerWatchers));
 gulp.task('release', gulp.series(setBuild, 'development',
-    gulp.parallel(cssMinConcat, jsMin, htmlMin, copyStaticFileRelease), concatRjs, concatAllJs, gzipTask));
+    gulp.parallel(cssMinConcat, concatAllJs, htmlMin, copyStaticFileRelease)));

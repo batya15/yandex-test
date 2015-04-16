@@ -21,6 +21,7 @@
     "src/**/*.gif",
     "src/**/*.{jpg,jpeg}",
     "src/**/*.{ttf,woff,eot}*",
+    "src/**/*.mp3",
     "src/**/*.png",
     "!**/bower_components/**"
   ],
@@ -28,6 +29,7 @@
   "staticRelease": [
     "build/**/*.svg",
     "build/**/*.gif",
+    "build/**/*.mp3",
     "build/**/*.json",
     "build/**/*.{jpg,jpeg}",
     "build/**/*.{ttf,woff,eot}*",

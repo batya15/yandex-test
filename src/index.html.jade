@@ -38,6 +38,8 @@ html(lang="en")
                 .input
                     input(autofocus, data-input)
                     button(data-run) Выполнить
+        .man.hide(data-man)
+            audio(src="/man.mp3")
     if (build == 'prod')
         script(data-main="main" src="/main.js")
     else
@@ -45,5 +47,6 @@ html(lang="en")
         script(data-main="main" src="/initDomain.js")
         script(data-main="main" src="/controllers/terminal.js")
         script(data-main="main" src="/views/terminal.js")
+        script(data-main="main" src="/views/man.js")
         script(data-main="main" src="/views/browser.js")
         script(data-main="main" src="/main.js")
