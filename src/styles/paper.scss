@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic,cyrillic-ext);
+
+.paper {
+
+  padding: 0 20px 20px;
+  font-family: 'PT Sans', sans-serif;
+
+  h1 {
+    width: 50%;
+    font-size: 24px;
+  }
+
+  .text {
+    column-count: 2;
+    column-gap: 50px;
+    column-rule: 0;
+    font-size: 16px;
+
+    p {
+      margin: 0 0 30px;
+      text-indent: 15px;
+      padding: 0 10px;
+    }
+
+    ul {
+      padding: 0 10px;
+      margin: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          left: -10px;
+          content: "-";
+        }
+      }
+
+      li:nth-child(2) {
+        span {
+          color: #0070ed;
+          border-bottom: 1px solid #0070ed;
+        }
+      }
+
+      li:nth-child(3) {
+        span {
+          border-bottom: 1px dashed black;
+        }
+      }
+
+
+    }
+
+  }
+
+}

@@ -8,6 +8,11 @@ html(lang="en")
         else
             link(rel='stylesheet', href='/vendor/css/normalize.css')
             link(rel='stylesheet', href='/styles/main.css')
+            link(rel='stylesheet', href='/styles/progressbar.css')
+            link(rel='stylesheet', href='/styles/icons.css')
+            link(rel='stylesheet', href='/styles/paper.css')
+            link(rel='stylesheet', href='/styles/buttons.css')
+            link(rel='stylesheet', href='/styles/rating.css')
     body
         .main
             .browser(data-browser)
@@ -15,17 +20,17 @@ html(lang="en")
                     ul(data-tabs)
                 .content(data-content)
                     .tab(data-caption='Текст')
-                        p тут текст об мне
-                    .tab(data-caption='Рейтинг')
-                        p Звездочки
-                    .tab(data-caption='Прогресс бар')
-                        p Прогресс бар
-                    .tab(data-caption='Кнопка')
-                        p Кнопки
-                    .tab(data-caption='Иконки')
-                        p Иконки
+                        include ./blocks/text.html.jade
+                    .tab.ratingWrap(data-caption='Рейтинг')
+                        include ./blocks/rating.html.jade
+                    .tab.prWrap(data-caption='Прогресс бар')
+                        include ./blocks/progressbar.html.jade
+                    .tab.buttons(data-caption='Кнопка')
+                        include ./blocks/button.html.jade
+                    .tab.icons(data-caption='Иконки')
+                        include ./blocks/icons.html.jade
                     .tab(data-caption='Газета')
-                        p Газета
+                        include ./blocks/paper.html.jade
             .terminal(data-terminal)
                 .output(data-output)
                     .center *** Welcome to terminal ***

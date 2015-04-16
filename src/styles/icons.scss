@@ -1,0 +1,78 @@
+.icons {
+
+  padding: 50px 0;
+
+  .icon {
+    height: 125px;
+    width: 126px;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: top;
+
+    &:before {
+      font-size: 0;
+      display: block;
+    }
+
+    .wrapText{
+      height: 100%;
+      width: 100%;
+      display: table;
+      font-size: 16px;
+      font-family: arial, sans-serif;
+      line-height: 18px;
+      .text {
+        padding: 5px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    &.chrome {
+      .gr {
+        color: #22a12a;
+      }
+      .red {
+        color: #c90000;
+      }
+      .yl{
+        color: #f9d411;
+      }
+      &:before {
+        content: url('/img/chrome.png');
+      }
+    }
+
+    &.firefox {
+      color: #f2a414;
+      &:before {
+        content: url('/img/firefox.png');
+      }
+    }
+
+    &.opera {
+      color: #c10e0e;
+      &:before {
+        content: url('/img/opera.png');
+      }
+    }
+
+    &.safari {
+      color: #646464;
+      &:before {
+        content: url('/img/safari.png');
+      }
+    }
+
+    &.ie {
+      float: right;
+      color: #036da3;
+      &:before {
+        content: url('/img/ie.png');
+      }
+
+    }
+
+  }
+}

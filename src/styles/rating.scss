@@ -1,0 +1,35 @@
+.ratingWrap {
+  padding: 30px;
+
+  .rating {
+
+    input {
+      display: none;
+    }
+
+    label {
+      cursor: url('/img/pointer.png'), pointer;
+      height: 16px;
+      width: 18px;
+      display: inline-block;
+      background: url('/img/raton.png') 0 0 no-repeat;
+
+      &:hover {
+        background: url('/img/raton.png') 0 0 no-repeat;
+      }
+    }
+
+    input[type=radio]:checked + label {
+      background: url('/img/raton.png') 0 0 no-repeat;
+    }
+
+    input[type=radio]:checked + label + input + label,
+    input[type=radio]:checked + label  + input + label  + input + label,
+    input[type=radio]:checked + label  + input + label  + input + label  + input + label,
+    input[type=radio]:checked + label  + input + label  + input + label  + input + label  + input + label,
+    {
+      background: url('/img/ratoff.png') 0 0 no-repeat;
+    }
+  }
+
+}

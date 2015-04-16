@@ -63,6 +63,7 @@ body, html {
 
     .content {
       height: calc(100% - 50px);
+      overflow: auto;
     }
 
   }
@@ -74,7 +75,7 @@ body, html {
     padding-bottom: 50px;
     position: relative;
     box-sizing: border-box;
-    font-family: 'Cousine';
+    font-family: 'Cousine', 'Arial';
 
     .output {
       height: 100%;
@@ -132,4 +133,7 @@ body, html {
 
   }
 
+}
+.clr {
+  clear: both;
 }
