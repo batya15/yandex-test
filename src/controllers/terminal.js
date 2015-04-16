@@ -4,7 +4,9 @@
 
     var TerminalController = function () {
         this._history = [];
-        this.commands = {};
+        this.commands = {
+            help: this.listCommand
+        };
     };
 
     /**
@@ -21,6 +23,20 @@
             console.error('fn not is function');
             return false;
         }
+    };
+
+    /**
+     * Список комнад
+     */
+    TerminalController.prototype.listCommand = function () {
+        var result = '';
+        for (var cmd in this.commands) {
+            if (!this.commands.hasOwnProperty(cmd)) {
+                continue;
+            }
+            result += cmd + '<br/>';
+        }
+        return result;
     };
 
     /**
